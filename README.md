@@ -19,15 +19,19 @@ Uses HTTP Angular (asynchronous) Observables with RxJS (JS version of Reactive l
 
 * "Observables are a new way of pushing data in JavaScript. An observable is a Producer of multiple values, “pushing” them to subscribers."
 
+* shows all github repos using a search term 'angular'.
+
 ## Screenshots
 
 ![Example screenshot](./img/fast-http-caching.png).
 
 ## Technologies
 
-* [Angular v7.2.13](https://angular.io/) & [Angular CLI v7.3.8](https://cli.angular.io/).
+* [Angular v8.0.0](https://angular.io/)
 
-* [RxJS Library v6.4.0](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
+* [Angular CLI v8.0.1](https://cli.angular.io/)
+
+* [RxJS Library v6.5.2](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
 
 * [RxJS startWith operator](http://reactivex.io/documentation/operators/startwith.html) used to emit a specified sequence of values before beginning to emit the items from the source Observable.
 
@@ -35,7 +39,7 @@ Uses HTTP Angular (asynchronous) Observables with RxJS (JS version of Reactive l
 
 ## Setup
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` or `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code Examples
 
@@ -71,7 +75,7 @@ export class AppComponent {
 
 ## Status & To-Do List
 
-* Status: Simple working app that displays all Gitgub repos with the keyword 'angular'.
+* Status: Working.
 
 * To-Do: add functionality such as Angular Material cards to display data.
 
@@ -83,4 +87,4 @@ export class AppComponent {
 
 ## Contact
 
-Created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
