@@ -1,6 +1,6 @@
 # :zap: Angular Fast Http Caching
 
-* Uses HTTP Angular (asynchronous) Observables with RxJS (JS version of Reactive library) and browser local storage to show a locally cached version of API data. 
+* Uses HTTP Angular (asynchronous) Observables with RxJS (JS version of Reactive library) and browser local storage to show a locally cached version of API data.
 * Replaced by real data once the network request has completed.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
@@ -19,7 +19,7 @@
 ## :books: General info
 
 * "Observables are a new way of pushing data in JavaScript. An observable is a Producer of multiple values, “pushing” them to subscribers."
-* shows all github repos using a search term 'angular'.
+* Shows all github repos using a search term 'angular'.
 
 ## :camera: Screenshots
 
@@ -27,8 +27,8 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v8](https://angular.io/)
-* [Angular CLI v8](https://cli.angular.io/)
+* [Angular v11](https://angular.io/)
+* [Angular CLI v11](https://cli.angular.io/)
 * [RxJS Library v6](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
 * [RxJS startWith operator](http://reactivex.io/documentation/operators/startwith.html) used to emit a specified sequence of values before beginning to emit the items from the source Observable.
 * [The HttpClient in @angular/common/http](https://angular.io/guide/http) offers a simplified client HTTP API for Angular applications that rests on the XMLHttpRequest interface exposed by browsers.
@@ -36,6 +36,7 @@
 ## :floppy_disk: Setup
 
 * Run `npm start` or `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Run `ng lint` to lint check code - quotemarks check changed to false in `tslint.json` - passes linting.
 
 ## :computer: Code Examples
 
@@ -68,11 +69,12 @@ export class AppComponent {
 ## :cool: Features
 
 * An Angular HTTP Observable is combined with RxJS and the browser's local storage to automatically serve up a locally cached version that gets replaced by the real data as soon as the network request is finished.
+* Updated to latest Angular 11 & all dependencies up to date.
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working.
-* To-Do: add functionality such as Angular Material cards to display data.
+* To-Do: nothing.
 
 ## :clap: Inspiration
 

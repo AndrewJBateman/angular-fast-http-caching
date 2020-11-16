@@ -1,32 +1,29 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
-import { map, startWith } from 'rxjs/operators'
+import { map, startWith } from "rxjs/operators";
 
-const CACHE_KEY = 'httpRepoCache';
+const CACHE_KEY = "httpRepoCache";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  repos;
+  title = "angular-fast-http-caching";
+  repos: any;
 
   constructor(http: HttpClient) {
-    const path = 'https://api.github.com/search/repositories?q=angular';
-    this.repos = http.get<any>(path)
-      .pipe(
-        map(data => data.items)
-      );
+    const path = "https://api.github.com/search/repositories?q=angular";
+    this.repos = http.get<any>(path).pipe(map((data) => data.items));
 
-    this.repos.subscribe(next => {
+    this.repos.subscribe((next) => {
       localStorage[CACHE_KEY] = JSON.stringify(next);
     });
 
     this.repos = this.repos.pipe(
-      startWith(JSON.parse(localStorage[CACHE_KEY] || '[]'))
-    )
-
+      startWith(JSON.parse(localStorage[CACHE_KEY] || "[]"))
+    );
   }
 }
