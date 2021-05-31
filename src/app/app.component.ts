@@ -18,7 +18,8 @@ export class AppComponent {
     const path = "https://api.github.com/search/repositories?q=angular";
     this.repos = http.get<any>(path).pipe(map((data) => data.items));
 
-    this.repos.subscribe((next) => {
+    this.repos.subscribe((next: any) => {
+      console.log('next data: ', next, typeof(next));
       localStorage[CACHE_KEY] = JSON.stringify(next);
     });
 
