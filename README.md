@@ -11,20 +11,24 @@
 
 ## :page_facing_up: Table of contents
 
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [:file_folder: License](#file_folder-license)
-* [Contact](#contact)
+* [:zap: Angular Fast Http Caching](#zap-angular-fast-http-caching)
+  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:books: General info](#books-general-info)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal_strength: Technologies](#signal_strength-technologies)
+  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:wrench: Testing](#wrench-testing)
+  * [:computer: Code Examples](#computer-code-examples)
+  * [:cool: Features](#cool-features)
+  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clap: Inspiration](#clap-inspiration)
+  * [:file_folder: License](#file_folder-license)
+  * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
 
 * "Observables are a new way of pushing data in JavaScript. An observable is a Producer of multiple values, “pushing” them to subscribers."
-* Shows all github repos using a search term 'angular'.
+* Shows github repos using a search term 'angular'.
 
 ## :camera: Screenshots
 
@@ -48,27 +52,30 @@
 * `app.component.ts` _subscribe to github repo and use http caching_
 
 ```typescript
-export class AppComponent {
-  repos;
+export class AppComponent implements OnInit {
+  title = "angular-fast-http-caching";
+  repos: any;
 
-  constructor(http: HttpClient) {
-    const path = 'https://api.github.com/search/repositories?q=angular';
-    this.repos = http.get<any>(path)
-      .pipe(
-        map(data => data.items)
-      );
+  constructor(private http: HttpClient) {}
 
-    this.repos.subscribe(next => {
-      localStorage[CACHE_KEY] = JSON.stringify(next);
+  ngOnInit() {
+    this.getRepos();
+  }
+
+  getRepos() {
+    const path = "https://api.github.com/search/repositories?q=angular";
+    this.repos = this.http.get<any>(path).pipe(map((data: any) => data.items));
+
+    this.repos.subscribe((next: any) => {
+      console.log("next data: ", next, typeof next); // type=object
+      localStorage[CACHE_KEY] = JSON.stringify(next); // store in local storage
     });
 
     this.repos = this.repos.pipe(
-      startWith(JSON.parse(localStorage[CACHE_KEY] || '[]'))
-    )
-
+      startWith(JSON.parse(localStorage[CACHE_KEY] || "[]"))
+    );
   }
 }
-
 ```
 
 ## :cool: Features
@@ -82,7 +89,7 @@ export class AppComponent {
 
 ## :clap: Inspiration
 
-* [Youtube tutorial by 'Demos with Angular', Fast HTTP Caching With Angular HTTP Observables](https://www.youtube.com/watch?v=Yf1FfhMetjs&t=535s).
+* [Youtube tutorial by 'Digital Fluency', Fast HTTP Caching With Angular HTTP Observables](https://www.youtube.com/watch?v=Yf1FfhMetjs&t=535s).
 * [Luuk Gruijs, Medium article, "Understanding, creating and subscribing to observables in Angular"](https://medium.com/@luukgruijs/understanding-creating-and-subscribing-to-observables-in-angular-426dbf0b04a3)
 
 ## :file_folder: License
