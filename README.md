@@ -18,6 +18,7 @@
 * [Features](#features)
 * [Status](#status)
 * [Inspiration](#inspiration)
+* [:file_folder: License](#file_folder-license)
 * [Contact](#contact)
 
 ## :books: General info
@@ -31,16 +32,16 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v12](https://angular.io/)
-* [RxJS Library v6](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
+* [Angular v13](https://angular.io/)
+* [RxJS Library v7](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
 * [RxJS startWith operator](http://reactivex.io/documentation/operators/startwith.html) used to emit a specified sequence of values before beginning to emit the items from the source Observable.
 * [The HttpClient in @angular/common/http](https://angular.io/guide/http) offers a simplified client HTTP API for Angular applications that rests on the XMLHttpRequest interface exposed by browsers.
 
 ## :floppy_disk: Setup
 
-* Run `npm start` or `ng serve` for a dev server.
+* `npm i` to install dependencies
+* Run `ng serve` for a dev server.
 * Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-* Run `ng lint` to lint check code - quotemarks check changed to false in `tslint.json` - passes linting.
 
 ## :computer: Code Examples
 
@@ -76,7 +77,7 @@ export class AppComponent {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working. Updated may 2021.
+* Status: Working.
 * To-Do: nothing.
 
 ## :clap: Inspiration
