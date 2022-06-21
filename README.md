@@ -17,7 +17,6 @@
   * [:camera: Screenshots](#camera-screenshots)
   * [:signal_strength: Technologies](#signal_strength-technologies)
   * [:floppy_disk: Setup](#floppy_disk-setup)
-  * [:wrench: Testing](#wrench-testing)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
@@ -36,7 +35,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v13](https://angular.io/)
+* [Angular v14](https://angular.io/)
 * [RxJS Library v7](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
 * [RxJS startWith operator](http://reactivex.io/documentation/operators/startwith.html) used to emit a specified sequence of values before beginning to emit the items from the source Observable.
 * [The HttpClient in @angular/common/http](https://angular.io/guide/http) offers a simplified client HTTP API for Angular applications that rests on the XMLHttpRequest interface exposed by browsers.
