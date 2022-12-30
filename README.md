@@ -35,7 +35,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v14](https://angular.io/)
+* [Angular v15](https://angular.io/)
 * [RxJS Library v7](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
 * [RxJS startWith operator](http://reactivex.io/documentation/operators/startwith.html) used to emit a specified sequence of values before beginning to emit the items from the source Observable.
 * [The HttpClient in @angular/common/http](https://angular.io/guide/http) offers a simplified client HTTP API for Angular applications that rests on the XMLHttpRequest interface exposed by browsers.
